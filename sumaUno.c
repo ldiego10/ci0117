@@ -13,6 +13,11 @@
  *El valor acumulado por 1000000 procesos es 1000000000 en 2593.375ms
 */
 
+/*
+*Este programa se encarga de tomar los procesos dados y hacer la suma especifica tomando
+*en cuenta 1000 y guarda el tiempo de ejecucion total de que duro el proceso
+*/
+
 #include <stdlib.h>
 #include <stdio.h>
 #include <unistd.h>
