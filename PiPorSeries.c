@@ -16,7 +16,12 @@
  * Con 1000000000 terminos Pi es 3.141592653 terminos en 3996.13ms
  * Con 3000000000 terminos Pi es 3.141592653 terminos en 11183.3ms*/
  * Es decir, entre mas terminos, mas exacto el valor de Pi
-
+*/
+/*
+*El programa se encarga en recibir cierta cantidad de terminos donde entre mas terminos ingresados mayor ciclos
+* o procesos van a ocurrir por lo que cada ve se va a acercar mas al valor eacto de Pi. Ademas de esto, el programa
+* va a calcular el tiempo de duracion para cumplir el total de ciclos.
+*/
 #include <stdio.h>
 #include <sys/time.h>
 #include <stdlib.h>
