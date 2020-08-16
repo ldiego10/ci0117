@@ -1,0 +1,35 @@
+PiPorSeries resultados:
+	-El valor calculado de Pi es 0 con 100 terminos
+	-El valor calculado de Pi es 0 con 1000 terminos
+	-El valor calculado de Pi es 0 con 10000 terminos
+	-El valor calculado de Pi es 0 con 100000 terminos
+	-El valor calculado de Pi es 0 con 1000000 terminos
+	
+Analisis porque siempre 0:
+	Al analizar el codigo se observa que el proceso padre 
+	hace un exit luego de las operaciones por lo que no se
+	imprime su resultado. El proceso hijo no hace operaciones
+	por lo que imprime su valor inicial que era 0.
+	Luego de unas modificaciones al codigo esto cambia.
+	Las modificaciones son dos, elimar el exit y sacar el fork()
+	fuera del for donde se estaba creando. Los resultados ahora 
+	si cambian a lo siguiente.
+	
+PiPorSeries resultados con codigo modificado:
+	-Padre: Valor calculado de Pi es 3.13159 con 100 terminos
+	-Hijo: Seguira siendo 0 ya que no hace operaciones.
+	-Padre: Valor calculado de Pi es 3.14059 con 1000 terminos
+	-Hijo: Seguira siendo 0 ya que no hace operaciones.
+	-Padre: Valor calculado de Pi es 3.14149 con 10000 terminos
+	-Hijo: Seguira siendo 0 ya que no hace operaciones.
+	-Padre: Valor calculado de Pi es 3.14158 con 100000 terminos
+	-Hijo: Seguira siendo 0 ya que no hace operaciones.
+	-Padre: Valor calculado de Pi es 3.14159 con 1000000 terminos
+	-Hijo: Seguira siendo 0 ya que no hace operaciones.
+	-Si ambos procesos entran al for de calcularSuma, los datos dados de 	ambos son iguales.
+	
+Funcionamiento:
+	El programa roma una cantidad de procesos donde en un for va a calcular
+	un valor con respecto a estos procesos, entre mayor la cantidad de
+	procesos mas se acerca al resultado de Pi.
+	

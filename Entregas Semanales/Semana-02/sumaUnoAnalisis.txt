@@ -1,0 +1,24 @@
+Resultados obtenidos del programa sumaUno:
+	-Al ejecutar el programa con 100 procesos el valor acumulado es 100000 en 0.216ms
+        en la version serial y en la version fork el resultado es 0 en 565.033ms
+        -Al ejecutar el programa con 1000 procesos el valor acumulado es 1000000 en 2.172ms
+        en la version serial y en la version fork el resultado es 0 en 3452.432ms
+        -Al ejecutar el programa con 100 procesos el valor acumulado es 100000 en 0.216ms
+        en la version serial y en la version fork el resultado es 0 en 565.033m
+        -Al ejecutar el programa con 10000 procesos el valor acumulado es 10000000 en 25.3msms
+        en la version serial y en la version fork el resultado es 0 en 33855.033ms
+        -Al ejecutar el programa con 100000 procesos el valor acumulado es 100000000 en 220.214msms
+        en la version serial y en la version fork el resultado es 0 en 65018.521ms
+        
+Version Fork:
+	La version fork siempre nos imprime un 0 sin importar la cantidad de procesos, esto se debe a que
+	al crear el proceso padre y el hijo, solamente el proceso padre va a hacer la suma pero luego de 
+	hacer esta suma, hace un exit por lo que no llega a imprimir nunca su resultado. El proceso hijo
+	nunca llega a hacer la suma el, y al no compartir los mismos segmentos de memoria que el proceso
+	padre nunca llega a tener un resultado en la cantidad de sumas por lo que simplemente imprime el
+	cero que tenia desde un inicio. 
+	
+Version Serial:
+	En esta version, el programa simplemente toma la cantidad de procesos dados y en un for va haciendo
+	la suma. Este no tiene ningun exit despues de hacer la suma por lo que si llega a imprimir su resultado
+	Ademas, se mide el tiempo de duracion en la simulacion de los procesos.
