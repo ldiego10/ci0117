@@ -17,6 +17,7 @@ int primero() {
  * 
  */
 int segundo() {
+   usleep(1000);
    printf( "Voy segundo\n" );
    return 0;
 }
