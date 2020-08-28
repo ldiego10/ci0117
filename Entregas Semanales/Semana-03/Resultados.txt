@@ -1,0 +1,6 @@
+Parte 2
+
+Se corre el programa enviarSinClases y recibirSinClases. 
+Al correr el primer programa se crea un nuevo mensaje en
+el messa queues al correr el programa recibirSinClases
+este mensaje que estaba esperando en la cola de mensajes se elimina.
