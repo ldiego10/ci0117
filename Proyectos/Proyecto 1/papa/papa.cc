@@ -71,7 +71,6 @@ int juegoPapa(struct Papa *p, struct totales *t, Buzon *b){
 		}
 		b->Recibir(b->pa.valor, 2020);
 		p->valorActual = b->pa.valor;
-		
 		if(p->vivo == 1){
 			fprintf(stderr, "El jugador %d tiene la papa con valor %d\n",p->ID, p->valorActual);
 			p->valorActual = cambiarPapa(p->valorActual);
@@ -126,11 +125,11 @@ int main(int argc, char ** argv){
    	if ( argc > 1 ) {
       		inicial = atoi( argv[ 2 ] );
    	}
-   	if ( compartido->total <= 0 ) {
+   	if ( inicial <= 0 ) {
      		inicial = rand() % 100 + 1;
    	}
    	
-   	buzon->Enviar((int) inicial, 2020);
+   	buzon->Enviar(inicial, 2020);
    	compartido -> IdActual = rand() % N + 1;
    	int x = 0;
    	
@@ -151,6 +150,7 @@ int main(int argc, char ** argv){
         }
         shmdt( (const void *) compartido );
         shmctl( id, IPC_RMID, NULL );
-   	
+   	delete(buzon);
+   	delete(mutex);
         exit(1);	
 }
