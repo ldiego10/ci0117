@@ -1,0 +1,51 @@
+Casos de prueba
+
+Caso 1
+2000 perlas
+4 hilos
+Corta en 1987
+Consigue 13 perlas
+Tiempo serial: 10.26ms
+Tiempo paralelo: 0.298ms
+
+Caso 2
+200 perlas
+4 hilos
+Corta en 176
+Gana 4 perlas
+Tiempo serial: 0.173ms
+Tiempo paralelo: 0.258ms
+
+Caso 3
+3000 perlas
+20 hilos
+Corta en 2990
+Gana 6 perlas
+Tiempo serial: 37.92ms
+Tiempo paralelo: 1.05ms
+
+Caso 4 
+2000 perlas
+200 hilos
+Corta en 1878
+Gana 5 perlas
+Tiempo serial: 15.18ms
+Tiempo paralelo: 1.41ms
+
+Caso 5
+2500 perlas
+200 hilos
+Corta en 1906
+Gana 9 perlas
+Tiempo serial: 15.88ms
+Tiempo paralelo: 7.53ms
+
+Caso 6
+2000 perlas
+10 hilos
+Corta en 1914
+Gana 7 perlas
+Tiempo serial: 10.397ms
+Timepo paralelo: 0.489ms
+
+Se puede observar como entre mayor cantidad de perlas mayor beneficio nos brinda el metodo paralelo.
