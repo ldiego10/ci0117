@@ -60,8 +60,9 @@ void * contarEtiquetas(void * x)
 
     bufferT = l->getNext(bufferT, i, bandera,cuentan);
      bandera = true;
-
+pthread_mutex_lock(mut);
      strtok_r = parseo(bufferT);
+     pthread_mutex_unlock(mut);
 
      for(int t = 0; t < 2; t++)
      {
@@ -341,21 +342,23 @@ map <string, int> mapCreate()
 
 string * parseo(char*  linea)
 {
-  int incremento = 0; 
+ int incremento = 0; 
   int i = 0 ;
   int j = 0;
   string * guarda = new string[2];
   guarda[1] = "False";
   
- 
+// cout << linea << endl;
 
   while(incremento < strlen(linea)){
-      if(linea[incremento-1] == '<'){
+      if(linea[incremento-1] == '<' && i < 2){
+      
           while(linea[incremento] != ' ' && linea[incremento] != '>'){
               if(j == 1){
                 guarda[1].clear();
                 j++;
               }
+             // cout << i << endl;
               guarda[i] = guarda[i] + linea[incremento];
               incremento++;
          }
@@ -366,6 +369,7 @@ string * parseo(char*  linea)
       }
   }
  return guarda;
+
 }
 
 int main(int argc, char** argv)
@@ -448,4 +452,3 @@ int main(int argc, char** argv)
   return 0;
 }
   
-
