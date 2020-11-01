@@ -93,9 +93,9 @@ int total = 0;
 	for(int k = 6; k <= num; k++){
 	total = 0;
 		if(esPar(k)){
-			for(int  i = 3; i < num && total < num; i++){
+			for(int  i = 2; i < num && total < num; i++){
 				if(esPrimo(i)){
-					for(int j = 3; j < num && total < num; j++){
+					for(int j = 2; j < num && total < num; j++){
 						if(esPrimo(j)){
 							if(i+j == k){
 								cout << k << "=" << i << "+" << j << endl;
@@ -118,9 +118,9 @@ int  k;
 	for(k = 6; k <= num; k++){
 	total = 0;
 		if(esPar(k)){
-			for(int  i = 3; i < num && total < num; i++){
+			for(int  i = 2; i < num && total < num; i++){
 				if(esPrimo(i)){
-					for(int j = 3; j < num && total < num; j++){
+					for(int j = 2; j < num && total < num; j++){
 						if(esPrimo(j)){
 							if(i+j == k){
 								omp_set_lock(&lock);
